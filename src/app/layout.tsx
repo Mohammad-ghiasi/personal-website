@@ -1,9 +1,13 @@
-// app/layout.tsx
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/providers/ChakraProvider";
+import { Box, Flex, HStack, IconButton, Show, Spacer, Text, VStack } from "@chakra-ui/react";
+import { FaHome, FaUser } from "react-icons/fa";
+import { MdLightMode, MdOutlineWork } from "react-icons/md";
+import { IoMailOpenSharp } from "react-icons/io5";
+import { TbMessageCircle2Filled } from "react-icons/tb";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +25,64 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          {children}
+          <Flex height="100vh"  >
+            <Box>
+              {children}
+            </Box>
+
+
+            <Box
+              className="lg:hidden "
+              
+            >
+              <Flex
+                as="nav"
+                align="center"
+                justify="space-between"
+                wrap="wrap"
+                padding="1rem"
+                backdropFilter="blur(10px)"  // Apply backdrop filter for blur effect
+                bg="#1111113f"  
+                position="fixed"
+                top="0"
+                left="0"
+                right="0"
+                zIndex="9999"
+                justifyContent='space-between' flexDirection='row'
+              >
+                <Text className="text-myYellow" fontSize="2xl" fontWeight="bold">M.GH</Text>
+                <Spacer />
+                <Link href="#" color="white">Home</Link>
+
+              </Flex>
+            </Box>
+
+
+
+
+            <Show above="lg">
+              <VStack
+                spacing={'20px'}
+                pr={5}
+                position="absolute"
+                right={4}
+                top="50%"
+                transform="translateY(-50%)"
+              >
+                <Link href='/'>
+                  <IconButton aria-label='home' size='lg' borderRadius="full" colorScheme="customYellow" icon={<FaHome size='23px' />} />
+                </Link>
+                <Link href='/about'>
+                  <IconButton aria-label='home' size='lg' borderRadius="full" icon={<FaUser size='23px' />} />
+                </Link>
+                <IconButton aria-label='home' size='lg' borderRadius="full" icon={<MdOutlineWork size='23px' />} />
+                <IconButton aria-label='home' size='lg' borderRadius="full" icon={<IoMailOpenSharp size='23px' />} />
+                <IconButton aria-label='home' size='lg' borderRadius="full" icon={<MdLightMode size='23px' />} />
+                <IconButton aria-label='home' size='lg' borderRadius="full" icon={<TbMessageCircle2Filled size='23px' />} />
+
+              </VStack>
+            </Show>
+          </Flex>
         </Providers>
       </body>
     </html>

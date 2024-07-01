@@ -11,7 +11,7 @@ const config: ThemeConfig = {
 const colors = {
   light: {
     background: "#ffffff",
-    text: "#66669A",
+    text: "#666666",
     primary: "#1a202c",
     secondary: "#718096",
   },
@@ -26,6 +26,13 @@ const colors = {
 // 2. Extend the theme
 const theme = extendTheme({
   config,
+  components: {
+    IconButton: {
+      baseStyle: {
+        colorScheme: "red", // Set the default colorScheme for IconButton
+      },
+    },
+  },
   styles: {
     global: (props: any) => ({
       body: {
@@ -44,6 +51,10 @@ const theme = extendTheme({
     },
     secondary: {
       500: colors.light.secondary, // You can add different shades if needed
+    },
+    customYellow: {
+      500: "#ffb400",
+      200: "#ffb400",
     },
   },
 });
