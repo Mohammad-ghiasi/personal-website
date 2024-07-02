@@ -32,37 +32,53 @@ export default function Home() {
 
   return (
     <>
-      <Flex height="100vh" alignItems="center" justifyContent="center" >
+      <Flex className="mt-0 md:mt-20 lg:mt-0" height="100vh" alignItems="center" justifyContent="center"  >
         <Flex height="100vh" alignItems="center" justifyContent="center" >
           <Show above="lg">
             <Box className="fixed w-[100vw] h-[100vh] bg-myYellow rotate-[70deg] z-[2] transform translate-x-[-800px]">
             </Box>
           </Show>
           <Box
-            maxW='90%'
+            maxW={{ base: '100%', md: '90%' }}
             display={{ md: "flex" }}
             className="z-10"
           >
             <Show above="lg">
-              <Box className="rounded-[30px] h-[540px] overflow-hidden shadow-[10px_15px_20px_-10px_#2a2a2a9b]">
-                <Image
-                  src="/images/dark.jpg"
-                  alt="Steve Milner"
-                  loading="lazy"
-                  width={450}
-                  height={400}
-                  className=" "
-                />
+              <Box className="rounded-[30px] h-[470px] xl:h-[540px] overflow-hidden shadow-[10px_15px_20px_-10px_#2a2a2a9b]">
+                <Box className="relative w-[350px]  lg:w-[400px] xl:w-[430px] h-[470px] xl:h-[540px]">
+                  <Image
+                    src="/images/dark.jpg"
+                    alt="Steve Milner"
+                    loading="lazy"
+                    fill
+                    className=" "
+                  />
+                </Box>
               </Box>
             </Show>
-            <VStack align="start" p={8} spacing={4} flex="1" ml={'100px'} pr={20} justifyContent={'center'}>
-              <Text className="text-myYellow text-[50px] font-bold">
+
+
+
+            <VStack className="flex justify-center lg:p-8 mx-5 lg:mx-[50px] xl:ml-[100px]  md:mr-[30px] xl:mr-[70px]  " alignItems={{ base: "start", md: "center", lg: "start" }} spacing={4} flex="1"  >
+              <Box className="hidden md:block lg:hidden  rounded-full overflow-hidden mb-5 h-[240px]  border-[#252525] border-4">
+                <Box className="relative w-[240px] h-[280px]  ">
+                  <Image
+                    src="/images/dark.jpg"
+                    alt="Steve Milner"
+                    loading="lazy"
+                    fill
+                    objectFit="cover"  // Ensures the image covers the entire container
+                    className="rounded-full"
+                  />
+                </Box>
+              </Box>
+              <Text className="text-myYellow text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px]  font-bold">
                 I'M STEVE MILNER.
               </Text>
-              <Text className="text-[50px] font-bold mt-[-30px]">
+              <Text className="text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px] font-bold mt-[-30px]">
                 WEB DESIGNER
               </Text>
-              <Text lineHeight={'40px'} className="text-[16px] font-medium">
+              <Text lineHeight={'40px'} className="text-[15px] md:text-[16px] font-medium sm:text-start  md:text-center lg:text-start ">
                 I'm a Tunisian based web designer & front-end developer focused on
                 crafting clean & user-friendly experiences, I am passionate about
                 building excellent software that improves the lives of those around me.
