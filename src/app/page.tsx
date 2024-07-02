@@ -1,14 +1,34 @@
 "use client"
 // pages/index.js
-import { Box, Flex, Text, Button, VStack, HStack, Show, useColorMode, IconButton } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, VStack, HStack, Show, useColorMode, IconButton, keyframes } from "@chakra-ui/react";
 import Image from "next/image";
 import { FaHome, FaUser } from "react-icons/fa";
 import { MdOutlineWork, MdLightMode, MdDarkMode } from "react-icons/md";
 import { IoMailOpenSharp } from "react-icons/io5";
 import { TbMessageCircle2Filled } from "react-icons/tb";
+import { TiArrowRightThick } from "react-icons/ti";
+import Link from "next/link";
+
+
+const pulseRing = keyframes`
+  0% {
+    
+    box-shadow: 0 0 0 0 rgba(255, 223, 0, 0.7);
+  }
+  70% {
+    
+    box-shadow: 0 0 0 10px rgba(255, 223, 0, 0);
+  }
+  100% {
+    
+    box-shadow: 0 0 0 0 rgba(255, 223, 0, 0);
+  }
+`;
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
+
+
 
   return (
     <>
@@ -47,9 +67,47 @@ export default function Home() {
                 crafting clean & user-friendly experiences, I am passionate about
                 building excellent software that improves the lives of those around me.
               </Text>
-              <Button mt={5} colorScheme="yellow" alignSelf="start">
-                MORE ABOUT ME
-              </Button>
+
+              <Link href='/about'>
+                <Box mt={5} className='inline-block cursor-pointer'>
+                  <Box className='flex flex-row items-center border border-myYellow h-[55px] rounded-full relative overflow-hidden transition ' _hover={{
+                    animation: `${pulseRing} 1.5s infinite`,
+                    _before: {
+                      transform: "translateX(0)",
+                    },
+                  }}
+                    _before={{
+                      content: '""',
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: "#ffb400",
+                      transition: "transform 0.6s ease",
+                      transform: "translateX(100%)",
+                      zIndex: -1,
+                    }}
+                    _after={{
+                      content: '""',
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      backgroundColor: "#ffb400",
+                      transition: "opacity 0.6s ease",
+                      opacity: 0,
+                      zIndex: -1,
+                    }}
+                  >
+                    <Text className='ps-[34px] pe-[20px]'>More About Me</Text>
+                    <Box className='flex justify-center items-center bg-myYellow h-[100%] rounded-full w-[54px]'>
+                      <TiArrowRightThick size='27px' />
+                    </Box>
+                  </Box>
+                </Box>
+              </Link>
             </VStack>
           </Box>
         </Flex>
