@@ -8,7 +8,7 @@ import DivMotion from "@/motions/Xmotion";
 export default function Home() {
   return (
     <>
-      <Flex className="mt-0 md:mt-20 lg:mt-0" height="100vh" alignItems="center" justifyContent="center"  >
+      <Flex className="mt-0 md:mt-32 lg:mt-0" height="100vh" alignItems="center" justifyContent="center"  >
         <Flex height="100vh" alignItems="center" justifyContent="center" >
           <Show above="lg">
             <Tringle />
@@ -59,10 +59,10 @@ export default function Home() {
                   damping: 10,      // مقاومت در برابر حرکت
                 }}
               >
-                <Text className="text-myYellow text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px]  font-bold">
+                <Text className="text-myYellow text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px]  font-bold text-start md:text-center lg:text-start">
                   I&apos;M STEVE MILNER.
                 </Text>
-                <Text className="text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px] font-bold mt-[-30px]">
+                <Text className="text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px] font-bold mt-[-10px] md:mt-[-20px] lg:mt-[-30px] text-start md:text-center lg:text-start">
                   WEB DESIGNER
                 </Text>
               </DivMotion>

@@ -11,7 +11,7 @@ export default function Hnav() {
             wrap="wrap"
             padding="1rem"
             backdropFilter="blur(10px)"  // Apply backdrop filter for blur effect
-            bg="#1111113f"
+            bg="#8282823e"
             position="fixed"
             top="0"
             left="0"
