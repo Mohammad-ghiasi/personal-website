@@ -22,7 +22,7 @@ const pulseRing = keyframes`
 export default function CustomButom() {
   return (
     <Link href='/about'>
-    <Box mt={5} className='inline-block cursor-pointer'>
+    <Box mt={5} mb={{base: '0', md: '20px', lg: '0'}} className='inline-block cursor-pointer '>
       <Box className='flex flex-row items-center border border-myYellow h-[55px] rounded-full relative overflow-hidden transition ' _hover={{
         animation: `${pulseRing} 1.5s infinite`,
         _before: {

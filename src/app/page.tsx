@@ -8,7 +8,7 @@ import DivMotion from "@/motions/Xmotion";
 export default function Home() {
   return (
     <>
-      <Flex className="mt-0 md:mt-32 lg:mt-0" height="100vh" alignItems="center" justifyContent="center"  >
+      <Flex className="mt-0 md:mt-44 lg:mt-0 " height="100vh" alignItems="center" justifyContent="center"  >
         <Flex height="100vh" alignItems="center" justifyContent="center" >
           <Show above="lg">
             <Tringle />
@@ -37,7 +37,7 @@ export default function Home() {
               </ DivMotion>
             </Show>
             <VStack className="flex justify-center lg:p-8 mx-5 lg:mx-[50px] xl:ml-[100px]  md:mr-[30px] xl:mr-[70px]  " alignItems={{ base: "start", md: "center", lg: "start" }} spacing={4} flex="1"  >
-              <Box className="hidden md:block lg:hidden  rounded-full overflow-hidden mb-5 h-[240px]  border-[#252525] border-4">
+              <Box className="hidden md:block lg:hidden bg-[#252525]  rounded-full overflow-hidden mb-5 h-[240px]  border-[#252525] border-4">
                 <Box className="relative w-[240px] h-[280px]  ">
                   <Image
                     src="/images/dark.jpg"
@@ -89,7 +89,7 @@ export default function Home() {
                   stiffness: 110,  // سختی فنر
                   damping: 10,      // مقاومت در برابر حرکت
                 }}
-
+                
               >
                 <CustomButom />
               </DivMotion>
