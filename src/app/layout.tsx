@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Flex height="100vh" >
+          <Box height="100vh" >
             {/* hrizenatl Nav */}
             <Box className="lg:hidden ">
               <Hnav />
@@ -35,7 +35,7 @@ export default function RootLayout({
             <Show above="lg">
               <Vnav />
             </Show>
-          </Flex>
+          </Box>
         </Providers>
       </body>
     </html>

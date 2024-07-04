@@ -1,7 +1,7 @@
 "use client"
 import { Box, Text, keyframes } from '@chakra-ui/react'
 import Link from 'next/link'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { TiArrowRightThick } from 'react-icons/ti'
 
 const pulseRing = keyframes`
@@ -19,9 +19,15 @@ const pulseRing = keyframes`
   }
 `;
 
-export default function CustomButom() {
+interface propsType{
+  icon: ReactNode,
+  text: string
+}
+
+export default function CustomButom(props: propsType) {
+  const {icon, text} = props
   return (
-    <Link href='/about'>
+
     <Box mt={5} mb={{base: '0', md: '20px', lg: '0'}} className='inline-block cursor-pointer '>
       <Box className='flex flex-row items-center border border-myYellow h-[55px] rounded-full relative overflow-hidden transition ' _hover={{
         animation: `${pulseRing} 1.5s infinite`,
@@ -54,12 +60,11 @@ export default function CustomButom() {
           zIndex: -1,
         }}
       >
-        <Text className='ps-[34px] pe-[20px]'>More About Me</Text>
+        <Text className='ps-[34px] pe-[20px]'>{text}</Text>
         <Box className='flex justify-center items-center bg-myYellow h-[100%] rounded-full w-[54px]'>
-          <TiArrowRightThick size='27px' />
+          {icon}
         </Box>
       </Box>
     </Box>
-  </Link>
   )
 }
