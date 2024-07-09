@@ -14,3 +14,7 @@ body {
     user-select: none;
     /* Non-prefixed version */
 }
+
+h1{
+    color: #9d9d9d4a;
+}

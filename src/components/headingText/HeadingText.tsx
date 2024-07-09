@@ -17,7 +17,7 @@ export default function HeadingText(props: proptype) {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className=' mt-0 lg:mt-20 mb-32'
+            className=' mt-0 lg:mt-14 mb-20'
         >
             <Text
                 position="absolute"

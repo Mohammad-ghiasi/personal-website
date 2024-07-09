@@ -1,18 +1,20 @@
 import CustomButom from '@/components/customButom/CustomButom';
 import HeadingText from '@/components/headingText/HeadingText';
 import { PageBase } from '@/components/PageBase/PageBase';
-import { Box,  Grid, Show, Text } from '@chakra-ui/react'
+import { Box, Divider, Grid, Show, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaDownload } from 'react-icons/fa';
 import { InfoText } from './InfoText';
 import InfoBox from './InfoBox';
+import Timeline from './Expeianse';
+import CircularProgressItem from './Skils';
 
 
 export default function AboutPage() {
   return (
     <PageBase >
       <Show above='md'>
-       <HeadingText base='RESUME' text='ABOUT' colorText='ME' />
+        <HeadingText base='RESUME' text='ABOUT' colorText='ME' />
       </Show>
       <Box
         display="flex"
@@ -32,7 +34,7 @@ export default function AboutPage() {
             <InfoText heading='Nationality' content='Iranian' />
             <InfoText heading='Skype' content='steve.milner' />
             <InfoText heading='Freelance' content='Available' />
-            <InfoText heading='Languages' content='English'/>
+            <InfoText heading='Languages' content='English' />
           </Grid>
           <Box my={5}>
             <CustomButom icon={<FaDownload size='20px' />} text='DOWNLOAD CV' />
@@ -40,12 +42,38 @@ export default function AboutPage() {
         </Box>
 
         {/* Statistics Section */}
-        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+        <Grid templateColumns="repeat(2, 1fr)" gap={3}>
           <InfoBox countNumber={12} content='YEARS OF EXPERIENCE' />
           <InfoBox countNumber={97} content='COMPLETED PROJECTS' />
           <InfoBox countNumber={81} content='HAPPY CUSTOMERS' />
           <InfoBox countNumber={53} content='AWARDS WON' />
         </Grid>
+      </Box>
+      <Box className=''>
+        <Box display="flex" justifyContent="center" className='my-20'>
+          <Divider orientation="horizontal" width="50%" bg='#9d9d9d63' style={{ height: '1px' }} />
+        </Box>
+        <Box className='grid grid-cols-2 md:grid-cols-4 '>
+          <CircularProgressItem label="HTML" value={90} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="CSS" value={85} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="JAVASCRIPT" value={75} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="TYPESCRIPT" value={70} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="REACT" value={80} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="NEXT" value={75} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="REDUX" value={95} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="MATERIAL-UI" value={80} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="CHAKRA-UI" value={100} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="REST API" value={90} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="GIT" value={80} color="customYellow.500" trackColor="gray.300" />
+          <CircularProgressItem label="WORDPRESS" value={60} color="customYellow.500" trackColor="gray.300" />
+          {/* Add more skills as needed */}
+        </Box>
+        <Box display="flex" justifyContent="center" className='my-20'>
+          <Divider orientation="horizontal" width="50%" bg='#9d9d9d63' style={{ height: '1px' }} />
+        </Box>
+      </Box>
+      <Box mt={5}>
+        <Timeline />
       </Box>
     </PageBase>
   )
