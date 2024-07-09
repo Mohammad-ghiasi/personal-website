@@ -15,6 +15,13 @@ body {
     /* Non-prefixed version */
 }
 
-h1{
+.selector {    
+    overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+h1 {
     color: #9d9d9d4a;
 }

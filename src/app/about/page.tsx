@@ -8,6 +8,7 @@ import { InfoText } from './InfoText';
 import InfoBox from './InfoBox';
 import Timeline from './Expeianse';
 import CircularProgressItem from './Skils';
+import Image from 'next/image';
 
 
 export default function AboutPage() {
@@ -16,6 +17,19 @@ export default function AboutPage() {
       <Show above='md'>
         <HeadingText base='RESUME' text='ABOUT' colorText='ME' />
       </Show>
+      <Box className="block md:hidden mt-20">
+        <Box className='flex justify-center items-center h-[100%] w-[100%]'>
+          <Box className=" relative w-[240px] h-[250px] rounded-full overflow-hidden mb-5  border-[#252525] border-4  ">
+            <Image
+              src="/images/dark.jpg"
+              alt="Steve Milner"
+              loading="lazy"
+              fill
+              objectFit="cover"  // Ensures the image covers the entire container
+            />
+          </Box>
+        </Box>
+      </Box>
       <Box
         display="flex"
         justifyContent="space-between"
