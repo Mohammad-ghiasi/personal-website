@@ -31,7 +31,7 @@ export default function HeadingText(props: proptype) {
             <Text
                 fontWeight="bold"
                 zIndex="2"
-                className='text-[50px] xl:text-[56px] font-extrabold'
+                className='text-[45px] xl:text-[50px] font-extrabold'
             >
                 {text} <Text as="span" className='ms-3 lg:ms-0' color="customYellow.500">{colorText}</Text>
             </Text>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/providers/ChakraProvider";
-import { Box, Flex, Show } from "@chakra-ui/react";
+import { Box, Show } from "@chakra-ui/react";
 import Vnav from "@/components/Vnav/Vnav";
 import Hnav from "@/components/Hnav/Hnav";
 

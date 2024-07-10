@@ -12,7 +12,7 @@ const TimelineItem = ({ icon, title, company, date, description }: any) => {
         <HStack align="start" spacing={4} mb={10} position="relative">
             <Box position="absolute" left={{base: '20px', md: '20px', lg: '25px'}} top={0} bottom={0} borderLeft=".1px solid" borderColor="#9d9d9d4a" zIndex={0} />
             {/* <Icon w={10} h={10} color="white" position="relative" zIndex={1} backgroundColor="customYellow.500" borderRadius="full" /> */}
-            <Box className="flex justify-center items-center bg-myYellow rounded-full ms-1" position="relative" zIndex={1} p={{ base: 2, lg: 3 }}>
+            <Box className="flex justify-center items-center bg-myYellow rounded-full ms-1" position="relative" zIndex={1} p={{ base: 1, lg: 2 }}>
                 {icon}
             </Box>
             <Box pl={{ base: 2, lg: 6 }} position="relative" zIndex={1}>
@@ -34,21 +34,21 @@ const Timeline = () => (
     <Box className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <VStack>
             <TimelineItem
-                icon={<MdOutlineWork size={'20px'} color="white" />}
+                icon={<MdOutlineWork size={'25px'} color="white" />}
                 title="Web Developer"
                 company="Envato"
                 date="2018 - Present"
                 description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
             />
             <TimelineItem
-                icon={<MdOutlineWork size={'20px'} color="white" />}
+                icon={<MdOutlineWork size={'25px'} color="white" />}
                 title="UI/UX Designer"
                 company="Themeforest"
                 date="2013 - 2018"
                 description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
             />
             <TimelineItem
-                icon={<MdOutlineWork size={'20px'} color="white" />}
+                icon={<MdOutlineWork size={'25px'} color="white" />}
                 title="Consultant"
                 company="Videohive"
                 date="2005 - 2013"
@@ -57,21 +57,21 @@ const Timeline = () => (
         </VStack>
         <VStack>
             <TimelineItem
-                icon={<LiaUniversitySolid size={'20px'} color="white" />}
+                icon={<LiaUniversitySolid size={'25px'} color="white" />}
                 title="Engineer Degree"
                 company="Oxford University"
                 date="2015"
                 description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
             />
             <TimelineItem
-                icon={<LiaUniversitySolid size={'20px'} color="white" />}
+                icon={<LiaUniversitySolid size={'25px'} color="white" />}
                 title="Master Degree"
                 company="Kiev University"
                 date="2012"
                 description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
             />
             <TimelineItem
-                icon={<LiaUniversitySolid size={'20px'} color="white" />}
+                icon={<LiaUniversitySolid size={'25px'} color="white" />}
                 title="Bachelor Degree"
                 company="Tunis High School"
                 date="2009"

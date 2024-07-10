@@ -1,13 +1,15 @@
 import CustomButom from '@/components/customButom/CustomButom';
 import HeadingText from '@/components/headingText/HeadingText';
 import { PageBase } from '@/components/PageBase/PageBase';
-import { Box, Divider, Grid, Show, SimpleGrid, Text } from '@chakra-ui/react'
-import React from 'react'
-import { FaDownload } from 'react-icons/fa';
-import { InfoText } from './InfoText';
-import InfoBox from './InfoBox';
-import Timeline from './Expeianse';
-import CircularProgressItem from './Skils';
+import { Box, Divider, Grid, Show, Text } from '@chakra-ui/react'
+import { FaDownload, FaHtml5, FaCss3Alt, FaReact, FaGithub, FaWordpressSimple, FaSass, FaYarn  } from 'react-icons/fa';
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiTypescript, SiNextdotjs, SiRedux, SiMui, SiChakraui, SiReactquery, SiPwa } from "react-icons/si";
+import { InfoText } from '../../components/abotPage/InfoText';
+import { TbMobiledata } from "react-icons/tb";
+import InfoBox from '../../components/abotPage/InfoBox';
+import Timeline from '../../components/abotPage/Expeianse';
+import CircularProgressItem from '../../components/abotPage/Skils';
 import Image from 'next/image';
 
 
@@ -67,19 +69,23 @@ export default function AboutPage() {
         <Box display="flex" justifyContent="center" className='my-20'>
           <Divider orientation="horizontal" width="50%" bg='#9d9d9d63' style={{ height: '1px' }} />
         </Box>
-        <Box className='grid grid-cols-2 md:grid-cols-4 '>
-          <CircularProgressItem label="HTML" value={90} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="CSS" value={85} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="JAVASCRIPT" value={75} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="TYPESCRIPT" value={70} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="REACT" value={80} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="NEXT" value={75} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="REDUX" value={95} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="MATERIAL-UI" value={80} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="CHAKRA-UI" value={100} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="REST API" value={90} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="GIT" value={80} color="customYellow.500" trackColor="gray.300" />
-          <CircularProgressItem label="WORDPRESS" value={60} color="customYellow.500" trackColor="gray.300" />
+        <Box className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+          <CircularProgressItem label="HTML" icon={<FaHtml5 size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="CSS" icon={<FaCss3Alt  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="JAVASCRIPT" icon={<IoLogoJavascript size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="TYPESCRIPT" icon={<SiTypescript size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="REACT" icon={<FaReact  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="NEXT" icon={<SiNextdotjs size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="REDUX" icon={<SiRedux  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="MATERIAL-UI" icon={<SiMui  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="CHAKRA-UI"  icon={<SiChakraui  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="REST API" icon={<TbMobiledata size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="GIT" icon={<FaGithub  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="WORDPRESS" icon={<FaWordpressSimple  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="REACTQUERY" icon={<SiReactquery   size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="SASS" icon={<FaSass  size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="PWA" icon={<SiPwa    size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="YARN" icon={<FaYarn    size='73px' className="text-[#ffb400]" />}/>
           {/* Add more skills as needed */}
         </Box>
         <Box display="flex" justifyContent="center" className='my-20'>

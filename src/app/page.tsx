@@ -5,10 +5,12 @@ import CustomButom from "@/components/customButom/CustomButom";
 import { motion } from "framer-motion"
 import DivMotion from "@/motions/Xmotion";
 import { TiArrowRightThick } from "react-icons/ti";
+import ContactForm from "@/components/Email";
 
 export default function Home() {
   return (
     <>
+      {/* <ContactForm /> */}
       <Flex className="mt-0 md:mt-44 lg:mt-0 " height="100vh" alignItems="center" justifyContent="center"  >
         <Flex height="100vh" alignItems="center" justifyContent="center" >
           <Show above="lg">

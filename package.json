@@ -15,6 +15,7 @@
     "framer-motion": "^11.2.12",
     "next": "14.1.4",
     "next-router-mock": "^0.9.13",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
