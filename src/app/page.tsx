@@ -5,7 +5,7 @@ import CustomButom from "@/components/customButom/CustomButom";
 import { motion } from "framer-motion"
 import DivMotion from "@/motions/Xmotion";
 import { TiArrowRightThick } from "react-icons/ti";
-import ContactForm from "@/components/Email";
+// import ContactForm from "@/components/Email";
 
 export default function Home() {
   return (
@@ -89,8 +89,8 @@ export default function Home() {
                 transition={{
                   duration: 1.1,
                   type: "spring",
-                  stiffness: 110,  // سختی فنر
-                  damping: 10,      // مقاومت در برابر حرکت
+                  stiffness: 110,  
+                  damping: 10,      
                 }}
 
               >
