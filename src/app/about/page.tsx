@@ -2,7 +2,7 @@ import CustomButom from '@/components/customButom/CustomButom';
 import HeadingText from '@/components/headingText/HeadingText';
 import { PageBase } from '@/components/PageBase/PageBase';
 import { Box, Divider, Grid, Show, Text } from '@chakra-ui/react'
-import { FaDownload, FaHtml5, FaCss3Alt, FaReact, FaGithub, FaWordpressSimple, FaSass, FaYarn  } from 'react-icons/fa';
+import { FaDownload, FaHtml5, FaCss3Alt, FaReact, FaGithub, FaWordpressSimple, FaSass, FaYarn } from 'react-icons/fa';
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript, SiNextdotjs, SiRedux, SiMui, SiChakraui, SiReactquery, SiPwa } from "react-icons/si";
 import { InfoText } from '../../components/abotPage/InfoText';
@@ -11,6 +11,7 @@ import InfoBox from '../../components/abotPage/InfoBox';
 import Timeline from '../../components/abotPage/Expeianse';
 import CircularProgressItem from '../../components/abotPage/Skils';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function AboutPage() {
@@ -53,7 +54,9 @@ export default function AboutPage() {
             <InfoText heading='Languages' content='English' />
           </Grid>
           <Box my={5}>
-            <CustomButom icon={<FaDownload size='20px' />} text='DOWNLOAD CV' />
+            <Link href='resume/mohammad-ghiasi_Resume.docx' download>
+              <CustomButom icon={<FaDownload size='20px' />} text='DOWNLOAD CV' />
+            </Link>
           </Box>
         </Box>
 
@@ -70,22 +73,22 @@ export default function AboutPage() {
           <Divider orientation="horizontal" width="50%" bg='#9d9d9d63' style={{ height: '1px' }} />
         </Box>
         <Box className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-          <CircularProgressItem label="HTML" icon={<FaHtml5 size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="CSS" icon={<FaCss3Alt  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="JAVASCRIPT" icon={<IoLogoJavascript size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="TYPESCRIPT" icon={<SiTypescript size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="REACT" icon={<FaReact  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="NEXT" icon={<SiNextdotjs size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="REDUX" icon={<SiRedux  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="MATERIAL-UI" icon={<SiMui  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="CHAKRA-UI"  icon={<SiChakraui  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="REST API" icon={<TbMobiledata size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="GIT" icon={<FaGithub  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="WORDPRESS" icon={<FaWordpressSimple  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="REACTQUERY" icon={<SiReactquery   size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="SASS" icon={<FaSass  size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="PWA" icon={<SiPwa    size='73px' className="text-[#ffb400]" />}/>
-          <CircularProgressItem label="YARN" icon={<FaYarn    size='73px' className="text-[#ffb400]" />}/>
+          <CircularProgressItem label="HTML" icon={<FaHtml5 size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="CSS" icon={<FaCss3Alt size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="JAVASCRIPT" icon={<IoLogoJavascript size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="TYPESCRIPT" icon={<SiTypescript size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="REACT" icon={<FaReact size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="NEXT" icon={<SiNextdotjs size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="REDUX" icon={<SiRedux size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="MATERIAL-UI" icon={<SiMui size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="CHAKRA-UI" icon={<SiChakraui size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="REST API" icon={<TbMobiledata size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="GIT" icon={<FaGithub size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="WORDPRESS" icon={<FaWordpressSimple size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="REACTQUERY" icon={<SiReactquery size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="SASS" icon={<FaSass size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="PWA" icon={<SiPwa size='73px' className="text-[#ffb400]" />} />
+          <CircularProgressItem label="YARN" icon={<FaYarn size='73px' className="text-[#ffb400]" />} />
           {/* Add more skills as needed */}
         </Box>
         <Box display="flex" justifyContent="center" className='my-20'>

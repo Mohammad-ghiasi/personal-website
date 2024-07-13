@@ -60,7 +60,7 @@ export default function CustomButom(props: propsType) {
           zIndex: -1,
         }}
       >
-        <Text className='ps-[34px] pe-[20px]'>{text}</Text>
+        <Text className='ps-[34px] pe-[20px] font-bold'>{text}</Text>
         <Box className='flex justify-center items-center bg-myYellow h-[100%] rounded-full w-[54px]'>
           {icon}
         </Box>

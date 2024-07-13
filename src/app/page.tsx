@@ -5,6 +5,7 @@ import CustomButom from "@/components/customButom/CustomButom";
 import { motion } from "framer-motion"
 import DivMotion from "@/motions/Xmotion";
 import { TiArrowRightThick } from "react-icons/ti";
+import Link from "next/link";
 // import ContactForm from "@/components/Email";
 
 export default function Home() {
@@ -89,15 +90,17 @@ export default function Home() {
                 transition={{
                   duration: 1.1,
                   type: "spring",
-                  stiffness: 110,  
-                  damping: 10,      
+                  stiffness: 110,
+                  damping: 10,
                 }}
 
               >
-                <CustomButom icon={<TiArrowRightThick size='27px' />} text="MORE ABOUT ME"  />
+                <Link href='/about'>
+                  <CustomButom icon={<TiArrowRightThick size='27px' />} text="MORE ABOUT ME" />
+                </Link>
               </DivMotion>
             </VStack>
-            
+
           </Box>
         </Flex>
       </Flex>

@@ -22,19 +22,19 @@ export default function HeadingText(props: proptype) {
             <Text
                 position="absolute"
                 fontWeight="bold"
-                color="rgba(174, 174, 174, 0.139)"
+                color="rgba(174, 174, 174, 0.246)"
                 zIndex="1"
                 className='text-[90px] xl:text-[100px]'
             >
                 {base}
             </Text>
-            <Text
+            <Box
                 fontWeight="bold"
                 zIndex="2"
-                className='text-[45px] xl:text-[50px] font-extrabold'
+                className='flex flex-row space-x-4 text-[45px] xl:text-[50px]'
             >
-                {text} <Text as="span" className='ms-3 lg:ms-0' color="customYellow.500">{colorText}</Text>
-            </Text>
+                <Text className='font-extrabold'>{text}</Text> <Text as="span" className='ms-3 lg:ms-0 font-extrabold' color="customYellow.500">{colorText}</Text>
+            </Box>
         </Box>
     )
 }

@@ -1,52 +1,89 @@
-import { Box, Button, Flex, FormControl, FormLabel, Input, Textarea, Text } from '@chakra-ui/react';
-import React from 'react'
-import { TiArrowRightThick } from "react-icons/ti";
+import HeadingText from '@/components/headingText/HeadingText';
+import { PageBase } from '@/components/PageBase/PageBase';
+import { Box, Flex, FormControl, Input, Show, Text, Textarea, Tooltip } from '@chakra-ui/react';
+import { IoMdMailOpen } from "react-icons/io";
+import { FaGithub, FaLinkedin, } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import Link from 'next/link';
+import CustomButom from '@/components/customButom/CustomButom';
+import { IoIosSend, IoMdCall } from "react-icons/io";
 
 export default function ContactPage() {
   return (
-    <Box m={10}>
-       <Flex minHeight="100vh" align="center" justify="center" bg="black" color="white" p={5}>
-      <Box
-        bg="gray.800"
-        p={8}
-        rounded="md"
-        w={{ base: '100%', md: '500px' }}
-        boxShadow="lg"
-      >
-        <Text fontSize="2xl" mb={4} fontWeight="bold">DON&apos;T BE SHY!</Text>
-        <Text mb={6}>
-          Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
-        </Text>
-        <form>
-          <FormControl id="name" mb={4}>
-            <FormLabel>Your Name</FormLabel>
-            <Input type="text" bg="gray.700" border="none" focusBorderColor="yellow.400" />
-          </FormControl>
-          <FormControl id="email" mb={4}>
-            <FormLabel>Your Email</FormLabel>
-            <Input type="email" bg="gray.700" border="none" focusBorderColor="yellow.400" />
-          </FormControl>
-          <FormControl id="subject" mb={4}>
-            <FormLabel>Your Subject</FormLabel>
-            <Input type="text" bg="gray.700" border="none" focusBorderColor="yellow.400" />
-          </FormControl>
-          <FormControl id="message" mb={4}>
-            <FormLabel>Your Message</FormLabel>
-            <Textarea bg="gray.700" border="none" focusBorderColor="yellow.400" />
-          </FormControl>
-          <Button type="submit" colorScheme="yellow" w="full">
-            Send Message
-          </Button>
-        </form>
-        <Box mt={8}>
-          <Text mb={2}>Mail me</Text>
-          <Text fontWeight="bold">steve@mail.com</Text>
-          <Text mt={4} mb={2}>Call me</Text>
-          <Text fontWeight="bold">+216 21 184 010</Text>
+    <PageBase>
+      <Show above='md'>
+        <HeadingText base='CONTACT' text='GET IN' colorText='TOUCH' />
+      </Show>
+      <Flex flexDirection={{ base: 'column', lg: 'row' }}>
+        <Box flex='6' className=' w-[100%]'>
+          <Box className='flex flex-col space-y-6 w-[100%]'>
+            <Text className='text-3xl font-bold'>DON'T BE SHY !</Text>
+            <Text >
+              Feel free to get in touch with me.
+              I am always open to discussing new projects,
+              creative ideas or opportunities to be part of your visions.
+            </Text>
+            <Box>
+              <Box className='flex flex-row items-center'>
+                <IoMdMailOpen size='35px' className="text-[#ffb400]" />
+                <Box className='flex flex-col space-y-[-5px] ps-3'>
+                  <Text className='font-light text-[15px]'>MAIL ME</Text>
+                  <Text className='font-bold text-[14px] lg:text-[15px] '>mohammadghiasi005@gmail.com</Text>
+                </Box>
+              </Box>
+              <Box className='flex flex-row items-center mt-4'>
+                <IoMdCall  size='35px' className="text-[#ffb400]" />
+                <Box className='flex flex-col space-y-[-5px] ps-3'>
+                  <Text className='font-light text-[15px]'>CALL ME</Text>
+                  <Text className='font-bold text-[16px] '>+98 918 701 2481</Text>
+                </Box>
+              </Box>
+            </Box>
+            <Box className='flex flex-row space-x-5 '>
+              <Tooltip hasArrow label='Github' bg='gray.500'>
+                <Link href='https://github.com/Mohammad-ghiasi'>
+                  <FaGithub size='22px' className="transi cursor-pointer hover:text-[#ffb400]" />
+                </Link>
+              </Tooltip>
+              <Tooltip hasArrow label='Linkedin' bg='gray.500'>
+                <Link href='https://www.linkedin.com/in/mohammad-ghiasi-2383432bb/'>
+                  <FaLinkedin size='22px' className="transi cursor-pointer hover:text-[#ffb400]" />
+                </Link>
+              </Tooltip>
+              <Tooltip hasArrow label='Gmail' bg='gray.400'>
+                <Link href='/contact'>
+                  <SiGmail size='22px' className="transi cursor-pointer hover:text-[#ffb400]" />
+                </Link>
+              </Tooltip>
+            </Box>
+          </Box>
         </Box>
-      </Box>
-    </Flex>
-      
-    </Box>
+        <Box flex='14' className=' h-[300px] w-[100%]'>
+          <Box className='ms-3 mt-20 lg:mt-0'>
+            <form>
+              <Box className='flex flex-col space-y-5 md:flex-row md:space-x-10 md:space-y-0'>
+                <FormControl>
+                  <Input type="text" placeholder="YOURE NAME" size='md' focusBorderColor="customYellow.500" />
+                </FormControl>
+                <FormControl>
+                  <Input type="text" placeholder="YOURE SUBJECT" size='md' focusBorderColor="customYellow.500" />
+                </FormControl>
+              </Box>
+              <Box className='flex flex-col'>
+                <FormControl>
+                  <Input type="email" placeholder="YOURE EMAIL" size='md' className='my-5' focusBorderColor="customYellow.500" />
+                </FormControl>
+                <FormControl>
+                  <Textarea placeholder="YOURE MESSAGE" size='md' h="100px" focusBorderColor="customYellow.500" />
+                </FormControl>
+              </Box>
+              <Box >
+                <CustomButom icon={<IoIosSend size='27px' />} text='SENS MESSAGE' />
+              </Box>
+            </form>
+          </Box>
+        </Box>
+      </Flex>
+    </PageBase>
   )
 }
