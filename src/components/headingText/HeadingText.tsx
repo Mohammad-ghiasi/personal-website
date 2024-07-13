@@ -24,14 +24,14 @@ export default function HeadingText(props: proptype) {
                 fontWeight="bold"
                 color="rgba(174, 174, 174, 0.246)"
                 zIndex="1"
-                className='text-[90px] xl:text-[100px]'
+                className='text-[90px] xl:text-[90px] font-extrabold'
             >
                 {base}
             </Text>
             <Box
                 fontWeight="bold"
                 zIndex="2"
-                className='flex flex-row space-x-4 text-[45px] xl:text-[50px]'
+                className='flex flex-row space-x-4 text-[45px] xl:text-[50px] '
             >
                 <Text className='font-extrabold'>{text}</Text> <Text as="span" className='ms-3 lg:ms-0 font-extrabold' color="customYellow.500">{colorText}</Text>
             </Box>

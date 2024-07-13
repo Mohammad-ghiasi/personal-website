@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { RiGitRepositoryFill } from "react-icons/ri";
 import { IoMdDocument } from "react-icons/io";
 import Image from 'next/image';
+import { CiLink } from "react-icons/ci";
 interface ModalContentComponentProps {
     isOpen: boolean;
     onClose: () => void;
@@ -32,11 +33,11 @@ const ModalContentComponent: React.FC<ModalContentComponentProps> = ({ isOpen, o
                         </Box>
                         <Box className='flex flex-row items-center space-x-3'>
                             <FaEye size='20px' className="text-[#ffb400]" />
-                            <Text><span className='text-[15px]'>Preview:</span> <Link href={previewLink} className='font-bold hover:text-[#ffb400] hover:underline'>View Project</Link></Text>
+                            <Text className='flex flex-row space-x-2'><span className='text-[15px]'>Preview:</span> <Link href={previewLink} className='font-bold hover:text-[#ffb400] hover:underline'><Box className='flex flex-row items-center'>View Project <CiLink size='22px' className="text-[#ffb400] ms-2 "/></Box></Link></Text>
                         </Box>
                         <Box className='flex flex-row items-center space-x-3'>
                             <RiGitRepositoryFill size='20px' className="text-[#ffb400]" />
-                            <Text><span className='text-[15px]'>Repository:</span> <Link href={repoLink} className='font-bold hover:text-[#ffb400] hover:underline'>View Repository</Link></Text>
+                            <Text className='flex flex-row space-x-2'><span className='text-[15px]'>Repository:</span> <Link href={repoLink} className='font-bold hover:text-[#ffb400] hover:underline'><Box className='flex flex-row items-center'>Repository <CiLink size='22px' className="text-[#ffb400] ms-2 "/></Box></Link></Text>
                         </Box>
                         <Box className='flex flex-row items-center space-x-3'>
                             <MdHourglassFull size='20px' className="text-[#ffb400]" />

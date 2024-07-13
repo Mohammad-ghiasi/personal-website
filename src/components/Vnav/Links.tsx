@@ -8,7 +8,6 @@ import { usePathname, useRouter } from 'next/navigation';
 export default function CustomIconButton({ href, icon, ariaLabel }: any) {
     const router = usePathname();
     const isActive = router === href;
-    console.log(router);
     
 
     return (

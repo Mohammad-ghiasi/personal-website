@@ -29,7 +29,7 @@ export default function CustomButom(props: propsType) {
   return (
 
     <Box mt={5} mb={{base: '0', md: '20px', lg: '0'}} className='inline-block cursor-pointer '>
-      <Box className='flex flex-row items-center border border-myYellow h-[55px] rounded-full relative overflow-hidden transition ' _hover={{
+      <Box className='flex flex-row items-center border border-myYellow h-[50px] rounded-full relative overflow-hidden transition ' _hover={{
         animation: `${pulseRing} 1.5s infinite`,
         _before: {
           transform: "translateX(0)",
@@ -60,8 +60,8 @@ export default function CustomButom(props: propsType) {
           zIndex: -1,
         }}
       >
-        <Text className='ps-[34px] pe-[20px] font-bold'>{text}</Text>
-        <Box className='flex justify-center items-center bg-myYellow h-[100%] rounded-full w-[54px]'>
+        <Text className='ps-[30px] pe-[16px] font-bold text-[15px]'>{text}</Text>
+        <Box className='flex justify-center items-center bg-myYellow h-[100%] rounded-full w-[50px]'>
           {icon}
         </Box>
       </Box>

@@ -10,7 +10,7 @@ interface XmotionProps extends MotionProps {
 export const pageVariants = {
     hidden: { opacity: 0, y: '20px', transition: { duration: 0.5 } },
     enter: { opacity: 1, y: '0', transition: { duration: 0.7 } },
-    exit: { opacity: 0, transition: { duration: 1 } },
+    exit: { opacity: 0, transition: { duration: 2 } },
 };
 
 export default function Template({ className, children, ...rest }: XmotionProps) {
