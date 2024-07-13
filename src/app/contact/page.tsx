@@ -17,7 +17,7 @@ export default function ContactPage() {
       <Flex flexDirection={{ base: 'column', lg: 'row' }}>
         <Box flex='6' className=' w-[100%]'>
           <Box className='flex flex-col space-y-6 w-[100%]'>
-            <Text className='text-3xl font-bold'>DON'T BE SHY !</Text>
+            <Text className='text-3xl font-bold'>DON&apos;T BE SHY !</Text>
             <Text >
               Feel free to get in touch with me.
               I am always open to discussing new projects,
