@@ -22,7 +22,7 @@ export default function HeadingText(props: proptype) {
             <Text
                 position="absolute"
                 fontWeight="bold"
-                color="rgba(174, 174, 174, 0.246)"
+                color="rgba(174, 174, 174, 0.206)"
                 zIndex="1"
                 className='text-[90px] xl:text-[90px] font-extrabold'
             >
