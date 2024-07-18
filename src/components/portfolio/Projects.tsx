@@ -21,7 +21,7 @@ export default function Projects() {
                 {DataProjects.map((item: DataProjectsType) =>
                     <Box key={item.repository} onClick={(): void => handleModal(item)} className="relative max-w-[100%] h-[250px] rounded-lg bg-orange-500 overflow-hidden group shadow-lg shadow-[#9796964a]">
                         <Image
-                            src={item.image}
+                            src={item.image? item.image : '/images/ondevelop.jpg'}
                             alt="Steve Milner"
                             loading="lazy"
                             fill

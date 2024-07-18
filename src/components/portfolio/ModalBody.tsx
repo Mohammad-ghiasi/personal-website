@@ -16,7 +16,6 @@ interface ModalContentComponentProps {
 const ModalContentComponent: React.FC<ModalContentComponentProps> = ({ isOpen, onClose, data }) => {
     const previewLink = data?.Preview ?? '#';
     const repoLink = data?.repository ?? '#';
-    const ImageLink = data?.image ?? '#';
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
@@ -50,7 +49,7 @@ const ModalContentComponent: React.FC<ModalContentComponentProps> = ({ isOpen, o
                     </Box>
                     <Box className='relative w-[100%] h-[370px] rounded-lg overflow-hidden mt-10 mb-3'>
                         <Image
-                            src={ImageLink}
+                            src={data?.image? data?.image : '/images/ondevelop.jpg'}
                             alt='project Image'
                             loading="lazy"
                             fill

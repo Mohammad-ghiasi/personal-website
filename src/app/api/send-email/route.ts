@@ -1,5 +1,3 @@
-// app/api/send-email/route.ts
-
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
@@ -7,10 +5,11 @@ interface RequestBody {
   name: string;
   email: string;
   message: string;
+  subject: string;
 }
 
 export async function POST(request: Request) {
-  const { name, email, message }: RequestBody = await request.json();
+  const { name, email, message, subject }: RequestBody = await request.json();
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -23,7 +22,7 @@ export async function POST(request: Request) {
   const mailOptions = {
     from: email,
     to: "Mohammadghiasi005@gmail.com",
-    subject: "Customer Message.",
+    subject: subject,
     text: `
       Name: ${name}
       Email: ${email}

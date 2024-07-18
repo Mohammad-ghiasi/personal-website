@@ -52,22 +52,94 @@ export default function ContactPage() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <Box className='flex flex-col space-y-5 md:flex-row md:space-x-10 md:space-y-0'>
                 <FormControl>
-                  <Input className={errors.name ? 'border border-red-500' : ''} type="text" placeholder="YOUR NAME" size='md' focusBorderColor="customYellow.500" {...register('name', { required: true })} />
-                  {errors.name && <Text color="red">Name is required</Text>}
+                  <Input
+                    className={errors.name ? 'border border-red-500' : ''}
+                    type="text"
+                    placeholder="YOUR NAME"
+                    size='md'
+                    focusBorderColor="customYellow.500"
+                    borderColor={errors.name? 'red': 'inherit'}
+                    {...register('name', {
+                      required: {
+                        value: true,
+                        message: 'name is required'
+                      },
+                      minLength: {
+                        value: 4,
+                        message: "minimume 4 letter"
+                      },
+                      pattern: {
+                        value: /^[A-Za-z]+$/,
+                        message: "Only letters are allowed"
+                      }
+                    })}
+                  />
+                  {errors.name && <Text color="red">{errors.name?.message}</Text>}
                 </FormControl>
                 <FormControl>
-                  <Input type="text" placeholder="YOUR SUBJECT" size='md' focusBorderColor="customYellow.500" {...register('subject', { required: true })} />
-                  {errors.subject && <Text color="red">Subject is required</Text>}
+                  <Input
+                    type="text"
+                    placeholder="YOUR SUBJECT"
+                    size='md'
+                    focusBorderColor="customYellow.500"
+                    borderColor={errors.subject? 'red': 'inherit'}
+                    {...register('subject', {
+                      required: {
+                        value: true,
+                        message: 'sunject is required'
+                      },
+                      minLength: {
+                        value: 4,
+                        message: "minimum 4 letters are allowed"
+                      },
+                      pattern: {
+                        value: /^[A-Za-z\u0600-\u06FF]+$/,
+                        message: "Only letters are allowed"
+                      }
+                    })}
+                  />
+                  {errors.subject && <Text color="red">{errors.subject.message}</Text>}
                 </FormControl>
               </Box>
               <Box className='flex flex-col'>
                 <FormControl className='my-5'>
-                  <Input type="email" placeholder="YOUR EMAIL" size='md' focusBorderColor="customYellow.500" {...register('email', { required: true })} />
-                  {errors.email && <Text color="red">Email is required</Text>}
+                  <Input
+                    type="email"
+                    placeholder="YOUR EMAIL"
+                    size='md'
+                    focusBorderColor="customYellow.500"
+                    borderColor={errors.email? 'red': 'inherit'}
+                    {...register('email', {
+                      required: {
+                        value: true,
+                        message: 'email is required'
+                      },
+                      maxLength: {
+                        value: 200,
+                        message: 'maximum 200 letters are allowed '
+                      }
+                    })}
+                    />
+                  {errors.email && <Text color="red">{errors.email.message}</Text>}
                 </FormControl>
                 <FormControl>
-                  <Textarea placeholder="YOUR MESSAGE" size='md' h="100px" focusBorderColor="customYellow.500" {...register('message', { required: true })} />
-                  {errors.message && <Text color="red">Message is required</Text>}
+                  <Textarea
+                    placeholder="YOUR MESSAGE"
+                    size='md' h="100px"
+                    focusBorderColor="customYellow.500"
+                    borderColor={errors.message? 'red': 'inherit'}
+                    {...register('message', {
+                      required: {
+                        value: true,
+                        message: 'message is required'
+                      },
+                      minLength: {
+                        value: 10,
+                        message: "minimum 10 letters are allowed"
+                      },
+                    })}
+                  />
+                  {errors.message && <Text color="red">{errors.message.message}</Text>}
                 </FormControl>
               </Box>
               <Box className='mb-5 lg:mb-0'>

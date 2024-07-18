@@ -1,8 +1,7 @@
-import { Box, Flex, Text, VStack, Show, CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, Show } from "@chakra-ui/react";
 import Image from "next/image";
 import Tringle from "@/components/tringle/Tringle";
 import CustomButom from "@/components/customButom/CustomButom";
-import { motion } from "framer-motion"
 import DivMotion from "@/motions/Xmotion";
 import { TiArrowRightThick } from "react-icons/ti";
 import Link from "next/link";
@@ -64,10 +63,10 @@ export default function Home() {
                 }}
               >
                 <Text className="text-myYellow text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px]  font-bold text-start md:text-center lg:text-start">
-                  I&apos;M STEVE MILNER.
+                  I&apos;M GHIASI.
                 </Text>
                 <Text className="text-[26px] md:text-[35px] lg:text-[40px] xl:text-[50px] font-bold mt-[-10px] md:mt-[-20px] lg:mt-[-30px] text-start md:text-center lg:text-start">
-                  WEB DESIGNER
+                  WEB DEVELOPER
                 </Text>
               </DivMotion>
               <DivMotion
@@ -79,9 +78,7 @@ export default function Home() {
                 dragElastic={.6}
               >
                 <Text lineHeight={'40px'} className="text-[15px] md:text-[16px] font-medium sm:text-start  md:text-center lg:text-start ">
-                  I&apos;m a Tunisian based web designer & front-end developer focused on
-                  crafting clean & user-friendly experiences, I am passionate about
-                  building excellent software that improves the lives of those around me.
+                  I&apos;m a Iranian based web designer & front-end developer focused on crafting clean & user-friendly experiences, I am passionate about building excellent software that improves the lives of those around me.
                 </Text>
               </DivMotion>
               <DivMotion
@@ -104,6 +101,8 @@ export default function Home() {
           </Box>
         </Flex>
       </Flex>
+
+
     </>
   );
 }
