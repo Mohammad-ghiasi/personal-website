@@ -27,14 +27,14 @@ export default function Home() {
                 animate={{ y: '0' }}
                 transition={{ duration: 1 }}
 
-                className="rounded-[30px] h-[470px] xl:h-[540px] overflow-hidden shadow-[10px_15px_20px_-10px_#2a2a2a9b]">
+                className="rounded-[30px] h-[470px] xl:h-[540px] overflow-hidden ">
                 <Box className="relative w-[350px]  lg:w-[400px] xl:w-[430px] h-[470px] xl:h-[540px]">
                   <Image
-                    src="/images/dark.jpg"
+                    src="/images/dark2.jpg"
                     alt="Steve Milner"
                     loading="lazy"
                     fill
-                    className=" "
+                    className="scale-125"
                   />
                 </Box>
               </ DivMotion>
@@ -43,12 +43,13 @@ export default function Home() {
               <Box className="hidden md:block lg:hidden bg-[#252525]  rounded-full overflow-hidden mb-5 h-[240px]  border-[#252525] border-4 mt-20">
                 <Box className="relative w-[240px] h-[280px]  ">
                   <Image
-                    src="/images/dark.jpg"
+                    src="/images/dark2.jpg"
                     alt="Steve Milner"
                     loading="lazy"
                     fill
-                    objectFit="cover"  // Ensures the image covers the entire container
-                    className="rounded-full"
+                    style={{ objectFit: 'cover', objectPosition: 'top' }}
+                      // Ensures the image covers the entire container
+                    className="rounded-full scale-125"
                   />
                 </Box>
               </Box>

@@ -1,5 +1,5 @@
 Options +Indexes
-<FilesMatch "\.docx$">
+<FilesMatch "\.pdf$">
     ForceType application/octet-stream
     Header set Content-Disposition attachment
 </FilesMatch>

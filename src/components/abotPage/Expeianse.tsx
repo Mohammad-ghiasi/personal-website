@@ -35,47 +35,47 @@ const Timeline = () => (
         <VStack>
             <TimelineItem
                 icon={<MdOutlineWork size={'25px'} color="white" />}
-                title="Web Developer"
-                company="Envato"
-                date="2018 - Present"
-                description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
+                title="Front-end Developer"
+                company="E-Tek"
+                date="2023 - 2024"
+                description="Implementation and optimization of the project based on customer needs and requirements."
             />
             <TimelineItem
                 icon={<MdOutlineWork size={'25px'} color="white" />}
-                title="UI/UX Designer"
-                company="Themeforest"
-                date="2013 - 2018"
-                description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
+                title="Front-end Developer"
+                company="Davis"
+                date="2021 - 2022"
+                description="Collaborate with stacksholders, product, and design teams to refine product requrements and design and develop user-friendly and responsive application"
             />
             <TimelineItem
                 icon={<MdOutlineWork size={'25px'} color="white" />}
-                title="Consultant"
-                company="Videohive"
-                date="2005 - 2013"
-                description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
+                title="Front-end Developer"
+                company="E-sys"
+                date="2019 - 2020"
+                description="Creation reusable components, Set Redux-toolkit as global project state manager, and Replacing Tailwind with Bootstrap for UI, styles."
             />
         </VStack>
         <VStack>
             <TimelineItem
                 icon={<LiaUniversitySolid size={'25px'} color="white" />}
-                title="Engineer Degree"
-                company="Oxford University"
-                date="2015"
-                description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
+                title="Teaching Assistant"
+                company="Azad University"
+                date="2022"
+                description="Assisting the professor with a wide range of educational initiatives, while actively participating in collaborative projects aimed at enhancing the learning experience and furthering academic objectives."
             />
             <TimelineItem
                 icon={<LiaUniversitySolid size={'25px'} color="white" />}
-                title="Master Degree"
-                company="Kiev University"
-                date="2012"
-                description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
+                title="Bachelor's degree"
+                company="Azad University"
+                date="2023"
+                description="I am currently pursuing a bachelor's degree in software engineering at Islamic Azad University, Kangavar branch."
             />
             <TimelineItem
                 icon={<LiaUniversitySolid size={'25px'} color="white" />}
                 title="Bachelor Degree"
-                company="Tunis High School"
-                date="2009"
-                description="Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit."
+                company="Talash Technical School"
+                date="2020"
+                description="Achieved a diploma in Networking and Software from Talash Technical School, demonstrating proficiency in essential technical skills and knowledge in the field."
             />
         </VStack>
     </Box>

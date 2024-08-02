@@ -27,7 +27,7 @@ export default function AboutPage() {
         <Box className='flex justify-center items-center h-[100%] w-[100%]'>
           <Box className=" relative w-[240px] h-[250px] rounded-full overflow-hidden mb-5  border-[#252525] border-4  ">
             <Image
-              src="/images/dark.jpg"
+              src="/images/dark2.jpg"
               alt="Steve Milner"
               loading="lazy"
               fill
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <InfoText copyOption={true} copyText='https://www.linkedin.com/in/mohammad-ghiasi-2383432bb/' heading='Linkedin' content='My Linkedin' />
           </Grid>
           <Box my={5}>
-            <Link href='resume/mohammad-ghiasi_Resume.docx' download>
+            <Link href='resume/mohammad-ghiasi_Resume.pdf' download target="_blank">
               <CustomButom icon={<FaDownload size='20px' />} text='DOWNLOAD CV' />
             </Link>
           </Box>
@@ -67,9 +67,9 @@ export default function AboutPage() {
 
         {/* Statistics Section */}
         <Grid templateColumns="repeat(2, 1fr)" gap={3}>
-          <InfoBox countNumber={12} content='YEARS OF EXPERIENCE' />
-          <InfoBox countNumber={97} content='COMPLETED PROJECTS' />
-          <InfoBox countNumber={81} content='HAPPY CUSTOMERS' />
+          <InfoBox countNumber={3} content='YEARS OF EXPERIENCE' />
+          <InfoBox countNumber={30} content='COMPLETED PROJECTS' />
+          <InfoBox countNumber={26} content='HAPPY CUSTOMERS' />
           <InfoBox countNumber={53} content='AWARDS WON' />
         </Grid>
       </Box>
